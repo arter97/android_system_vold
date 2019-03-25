@@ -45,12 +45,7 @@ bool IsSupported() {
 }
 
 status_t Check(const std::string& source, bool trusted) {
-    std::vector<std::string> cmd;
-    cmd.push_back(kFsckPath);
-    cmd.push_back("-a");
-    cmd.push_back(source);
-
-    return ForkExecvp(cmd, trusted ? sFsckContext : sFsckUntrustedContext);
+    return 0;
 }
 
 status_t Mount(const std::string& source, const std::string& target, const std::string& opts /* = "" */, bool portable) {
