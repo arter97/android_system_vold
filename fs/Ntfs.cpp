@@ -61,7 +61,7 @@ status_t Check(const std::string& source) {
 status_t Mount(const std::string& source, const std::string& target, int ownerUid, int ownerGid,
                int permMask) {
     auto mountData = android::base::StringPrintf("utf8,uid=%d,gid=%d,fmask=%o,dmask=%o,"
-                                                 "shortname=mixed,nodev,nosuid,dirsync,noatime,"
+                                                 "shortname=mixed,nodev,nosuid,noatime,"
                                                  "noexec", ownerUid, ownerGid, permMask, permMask);
 
     std::vector<std::string> cmd;
